@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Bmi Calculator</string>
+    <string name="gender_select">Select Your Gender</string>
+    <string name="age_select">Age</string>
+    <string name="height_select">Height</string>
+    <string name="weight_select">Weight</string>
+    <string name="details">Your Details</string>
+    <string name="cal_btn">Calculate</string>
+    <string name="re_cal">Re-Calculate</string>
+    <string name="bmivalue">Bmi Value</string>
+    <string name="result">Result</string>
+    <string name="title">Bmi Calculator</string>
+    <string name="editage">Enter your Age</string>
+    <string name="editheight">Enter your Height</string>
+    <string name="editweight">Enter your Weight</string>
+    <string name="lottieunderweight">UnderWeight</string>
+    <string name="lottieNormal">Normal</string>
+    <string name="lottieOverweight">OverWeight</string>
+    <string name="lottieObese">Obese</string>
+    <string name="adunit">ca-app-pub-3014274133298888/7749831341</string>
+</resources>

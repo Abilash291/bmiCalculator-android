@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultPage"
+    android:background="@color/bg">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ResultPage"
+        android:background="@color/bg">
+
+        <View
+            android:id="@+id/resultTitlebar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </View>
+
+        <TextView
+            android:id="@+id/resulttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/title"
+            android:textColor="@color/red"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/resultTitlebar"
+            app:layout_constraintEnd_toEndOf="@+id/resultTitlebar"
+            app:layout_constraintStart_toStartOf="@+id/resultTitlebar"
+            app:layout_constraintTop_toTopOf="@+id/resultTitlebar" />
+
+        <FrameLayout
+            android:id="@+id/resultFrame"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/blackstrokebg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultTitlebar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/resultcolor"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/normal"
+                    app:layout_constraintEnd_toStartOf="@+id/colortext"
+                    app:layout_constraintHorizontal_bias="0.058"
+                    app:layout_constraintStart_toStartOf="@+id/reultvalue"
+                    app:layout_constraintTop_toBottomOf="@+id/reultvalue"></ImageView>
+
+                <TextView
+                    android:id="@+id/reult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="@string/result"
+                    android:textColor="@color/red"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                <TextView
+                    android:id="@+id/reultvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="35dp"
+                    android:background="@drawable/strokebg"
+                    android:lineSpacingExtra="2dp"
+                    android:padding="10dp"
+                    android:text="Your Bmi : 22"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lottieAnimationView"
+                    app:layout_constraintTop_toTopOf="@+id/lottieAnimationView"
+                    app:layout_constraintVertical_bias="0.131"></TextView>
+
+                <TextView
+                    android:id="@+id/colortext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="serif"
+                    android:text="Normal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/resultcolor"
+                    app:layout_constraintEnd_toEndOf="@+id/reultvalue"
+                    app:layout_constraintStart_toEndOf="@+id/resultcolor"
+                    app:layout_constraintTop_toTopOf="@+id/resultcolor"
+                    app:layout_constraintVertical_bias="0.0"></TextView>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.054"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reult"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:lottie_autoPlay="true"
+                    app:lottie_rawRes="@raw/bmicross"></com.airbnb.lottie.LottieAnimationView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/indicatorFrame"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/blackstrokebg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultFrame">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Catagory"
+                    android:fontFamily="serif"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <ImageView
+                    android:id="@+id/low"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/low"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <TextView
+                    android:id="@+id/lowtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="UnderWeight"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/low"
+                    app:layout_constraintStart_toEndOf="@+id/low"
+                    app:layout_constraintTop_toTopOf="@+id/low"></TextView>
+
+                <ImageView
+                    android:id="@+id/normal"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignBottom="@id/low"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/normal"
+                    app:layout_constraintEnd_toEndOf="@+id/low"
+                    app:layout_constraintStart_toStartOf="@+id/low"
+                    app:layout_constraintTop_toBottomOf="@+id/low"></ImageView>
+
+                <TextView
+                    android:id="@+id/hightext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OverWeight"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/high"
+                    app:layout_constraintStart_toEndOf="@+id/high"
+                    app:layout_constraintTop_toTopOf="@+id/high"></TextView>
+
+                <TextView
+                    android:id="@+id/normaltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/normal"
+                    app:layout_constraintStart_toEndOf="@+id/normal"
+                    app:layout_constraintTop_toTopOf="@+id/normal"></TextView>
+
+                <TextView
+                    android:id="@+id/veryhightext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Obese"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/veryhigh"
+                    app:layout_constraintStart_toEndOf="@+id/veryhigh"
+                    app:layout_constraintTop_toTopOf="@+id/veryhigh"></TextView>
+
+                <TextView
+                    android:id="@+id/lowvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="&lt; 18"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/lowtext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lowtext"
+                    app:layout_constraintTop_toTopOf="@+id/lowtext"></TextView>
+
+                <TextView
+                    android:id="@+id/normalvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="18 - 24"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/normaltext"
+                    app:layout_constraintEnd_toEndOf="@+id/lowvalue"
+                    app:layout_constraintStart_toStartOf="@+id/lowvalue"
+                    app:layout_constraintTop_toTopOf="@+id/normaltext"></TextView>
+
+                <TextView
+                    android:id="@+id/highvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="25 - 29"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/hightext"
+                    app:layout_constraintEnd_toEndOf="@+id/normalvalue"
+                    app:layout_constraintStart_toStartOf="@+id/normalvalue"
+                    app:layout_constraintTop_toTopOf="@+id/hightext"></TextView>
+
+                <TextView
+                    android:id="@+id/veryhighvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="&gt; 30"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/veryhightext"
+                    app:layout_constraintEnd_toEndOf="@+id/highvalue"
+                    app:layout_constraintStart_toStartOf="@+id/highvalue"
+                    app:layout_constraintTop_toTopOf="@+id/veryhightext"></TextView>
+
+                <ImageView
+                    android:id="@+id/high"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@color/high"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/normal"
+                    app:layout_constraintStart_toStartOf="@+id/normal"
+                    app:layout_constraintTop_toBottomOf="@+id/normal"></ImageView>
+
+                <ImageView
+                    android:id="@+id/veryhigh"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@color/veryhigh"
+                    app:layout_constraintEnd_toEndOf="@+id/high"
+                    app:layout_constraintStart_toStartOf="@+id/high"
+                    app:layout_constraintTop_toBottomOf="@+id/high"></ImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/yourdetails"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/blackstrokebg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indicatorFrame">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="5dp"
+                    android:textSize="25dp"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/detailsgender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Gender"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.124"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Age"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsgender"
+                    app:layout_constraintHorizontal_bias="0.628"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detailsgender"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsheight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Height"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsgender"
+                    app:layout_constraintHorizontal_bias="0.897"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detailsage"></TextView>
+
+
+                <TextView
+                    android:id="@+id/detailsweight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Weight"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsheight"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/detailsheight"
+                    app:layout_constraintTop_toBottomOf="@+id/detailsheight"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsgendervalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="gvalue"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/detailsgender"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/detailsgender"
+                    app:layout_constraintTop_toTopOf="@+id/detailsgender"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsagevalue"
+                    android:layout_width="71dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="agevalue"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/detailsage"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsgendervalue"
+                    app:layout_constraintStart_toStartOf="@+id/detailsgendervalue"
+                    app:layout_constraintTop_toTopOf="@+id/detailsage"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsheightvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="h value"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/detailsheight"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsagevalue"
+                    app:layout_constraintStart_toStartOf="@+id/detailsagevalue"
+                    app:layout_constraintTop_toTopOf="@+id/detailsheight"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsweightvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="weight value"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/detailsweight"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsheightvalue"
+                    app:layout_constraintStart_toStartOf="@+id/detailsheightvalue"
+                    app:layout_constraintTop_toTopOf="@+id/detailsweight"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsbvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="bmivalue"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/detailsbmivalue"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsweightvalue"
+                    app:layout_constraintStart_toStartOf="@+id/detailsweightvalue"
+                    app:layout_constraintTop_toTopOf="@+id/detailsbmivalue"></TextView>
+
+                <TextView
+                    android:id="@+id/detailsbmivalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="@string/bmivalue"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/detailsweight"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/detailsweight"
+                    app:layout_constraintTop_toBottomOf="@+id/detailsweight"></TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/recal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yourdetails"></View>
+
+        <Button
+            android:id="@+id/recalbtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/redbg"
+            android:fontFamily="serif"
+            android:text="@string/re_cal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/recal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/recal"
+            app:layout_constraintTop_toBottomOf="@+id/yourdetails"></Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

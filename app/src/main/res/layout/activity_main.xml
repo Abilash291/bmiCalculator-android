@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bg">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <View
+            android:id="@+id/Titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </View>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="@string/title"
+            android:textColor="@color/red"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/Titlebar"
+            app:layout_constraintStart_toStartOf="@+id/Titlebar"
+            app:layout_constraintTop_toTopOf="@+id/Titlebar" />
+
+        <FrameLayout
+            android:id="@+id/genderFrame"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titlebar">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="serif"
+                    android:text="@string/gender_select"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+
+
+                <ImageView
+                    android:id="@+id/maleicon"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:contentDescription="male"
+                    android:src="@drawable/manicon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.083"
+                    app:layout_constraintStart_toEndOf="@+id/no1"
+                    app:layout_constraintTop_toBottomOf="@+id/gender"
+                    app:layout_constraintVertical_bias="0.428">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/femaleicon"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/femaleicon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.679"
+                    app:layout_constraintStart_toEndOf="@+id/maleicon"
+                    app:layout_constraintTop_toBottomOf="@+id/gender"
+                    app:layout_constraintVertical_bias="0.428">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/no1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="1"
+                    android:textColor="@color/buttonbg"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/gender"
+                    app:layout_constraintHorizontal_bias="0.26"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ageFrame"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderFrame">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/up"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/uparrow"
+                    app:layout_constraintBottom_toBottomOf="@+id/editage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/editage"
+                    app:layout_constraintTop_toTopOf="@+id/age"></ImageView>
+
+                <ImageView
+                    android:id="@+id/down"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/downarrow"
+                    app:layout_constraintEnd_toEndOf="@+id/up"
+                    app:layout_constraintStart_toStartOf="@+id/up"
+                    app:layout_constraintTop_toBottomOf="@+id/up"></ImageView>
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="serif"
+                    android:text="@string/age_select"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <Button
+                    android:id="@+id/agebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/redbg"
+                    android:fontFamily="serif"
+                    android:text="next"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editage"
+                    app:layout_constraintStart_toStartOf="@+id/editage"
+                    app:layout_constraintTop_toBottomOf="@+id/editage">
+
+                </Button>
+
+                <TextView
+                    android:id="@+id/no2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="2"
+                    android:textColor="@color/buttonbg"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/age"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/age" />
+
+                <EditText
+                    android:id="@+id/editage"
+                    android:layout_width="165dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/strokebg"
+                    android:hint="@string/editage"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.381"
+                    app:layout_constraintStart_toEndOf="@+id/no2"
+                    app:layout_constraintTop_toBottomOf="@+id/age">
+
+                </EditText>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/heightFrame"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ageFrame">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="serif"
+                    android:text="@string/height_select"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editheight"
+                    android:layout_width="195dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/strokebg"
+                    android:hint="@string/editheight"
+                    android:inputType="number"
+                    android:importantForAutofill="no"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.381"
+                    app:layout_constraintStart_toEndOf="@+id/no3"
+                    app:layout_constraintTop_toBottomOf="@+id/height">
+
+                </EditText>
+
+                <TextView
+                    android:id="@+id/no3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="3"
+                    android:textColor="@color/buttonbg"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/height"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/height" />
+
+                <ToggleButton
+                    android:id="@+id/heighttoggleButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custombg"
+                    android:checked="true"
+                    android:fontFamily="serif"
+                    android:text="ToggleButton"
+                    android:textColor="@color/black"
+                    android:textOff="cm"
+                    android:textOn="ft"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/editheight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/editheight"
+                    app:layout_constraintTop_toTopOf="@+id/editheight" />
+
+                <Button
+                    android:id="@+id/heightbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/redbg"
+                    android:fontFamily="serif"
+                    android:text="next"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/editheight"
+                    app:layout_constraintStart_toStartOf="@+id/editheight"
+                    app:layout_constraintTop_toBottomOf="@+id/editheight">
+
+                </Button>
+
+                <EditText
+                    android:id="@+id/feet"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/strokebg"
+                    android:hint="feet"
+                    android:importantForAutofill="no"
+                    android:maxLength="1"
+                    android:nextFocusForward="@id/inches"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/editheight"
+                    app:layout_constraintEnd_toEndOf="@+id/editheight"
+                    app:layout_constraintHorizontal_bias="0.104"
+                    app:layout_constraintStart_toStartOf="@+id/editheight"
+                    app:layout_constraintTop_toTopOf="@+id/editheight"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/inches"
+                    android:layout_width="70dp"
+                    android:importantForAutofill="no"
+                    android:layout_height="40dp"
+                    android:background="@drawable/strokebg"
+                    android:hint="inches"
+                    android:nextFocusForward="@id/editweight"
+                    android:maxLines="1"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/feet"
+                    app:layout_constraintEnd_toEndOf="@+id/editheight"
+                    app:layout_constraintStart_toEndOf="@+id/feet"
+                    app:layout_constraintTop_toTopOf="@+id/feet" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/weightFrame"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heightFrame">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="serif"
+                    android:text="@string/weight_select"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editweight"
+                    android:layout_width="195dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/strokebg"
+                    android:hint="@string/editweight"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.381"
+                    app:layout_constraintStart_toEndOf="@+id/no4"
+                    app:layout_constraintTop_toBottomOf="@+id/weight">
+
+                </EditText>
+
+                <TextView
+                    android:id="@+id/no4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="4"
+                    android:textColor="@color/buttonbg"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/weight"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+                <ToggleButton
+                    android:id="@+id/weighttoggleButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custombg"
+                    android:fontFamily="serif"
+                    android:text="ToggleButton"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textOff="Kg"
+                    android:textOn="lbs"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/editweight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/editweight"
+                    app:layout_constraintTop_toTopOf="@+id/editweight" />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/calculateFrame"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/cardbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightFrame"
+            >
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/calbtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/redbg"
+            android:fontFamily="serif"
+            android:text="@string/cal_btn"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/calculateFrame"
+            app:layout_constraintEnd_toEndOf="@+id/calculateFrame"
+            app:layout_constraintStart_toStartOf="@+id/calculateFrame"
+            app:layout_constraintTop_toTopOf="@+id/calculateFrame"></Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

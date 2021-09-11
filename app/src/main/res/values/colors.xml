@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#171010</color>
+    <color name="red">#FA1E0E</color>
+    <color name="black">#FFFFFFFF</color>
+    <color name="low">#FFBE0F</color>
+    <color name="normal">#00FF00</color>
+    <color name="high">#FF6000</color>
+    <color name="veryhigh">#DB0000</color>
+    <color name="cardbg">#2B2B2B</color>
+    <color name="buttonbg">#EE3939</color>
+
+</resources>
